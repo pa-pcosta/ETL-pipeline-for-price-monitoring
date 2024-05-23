@@ -33,7 +33,7 @@ dataFrame['new_price'] = dataFrame['new_price_reais'] + dataFrame['new_price_cen
 # Remover antigas colunas de preços
 dataFrame.drop(columns=['old_price_reais', 'old_price_centavos', 'new_price_reais', 'new_price_centavos'])
 
-# Conectar a um banco de dados
+# Conectar a um banco de dados SQLite
 connection = sqlite3.connect('data/quotes.db')
 
 # Salvar o dataFrame no banco de dados
