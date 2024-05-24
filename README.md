@@ -20,7 +20,7 @@
 ## Description
 This repository contains a data analysis for a ficticious company that would like a **market research** in the category of _male sports sneakears_ on the web page _Mercado Livre_ to analyze the following points:
 
-1. What are the brands wich appear the most on the 10 first pages?
+1. What are the brands which appear the most on the first 10 pages?
 2. How much is the average price by brand?
 3. What is the average satisfaction by brand?
 
