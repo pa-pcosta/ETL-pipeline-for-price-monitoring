@@ -7,7 +7,7 @@ import sqlite3
 # pd.options.display.max_columns = None
 
 # Definir o caminho para o arquivo de dados
-dataFrame = pd.read_json('data\data.jsonl', lines=True)
+dataFrame = pd.read_json('../data/data.jsonl', lines=True)
 
 # Adicionar a coluna _source com um valor fixo
 dataFrame['_source'] = "https://lista.mercadolivre.com.br/tenis-corrida-masculino"
@@ -34,7 +34,7 @@ dataFrame['new_price'] = dataFrame['new_price_reais'] + dataFrame['new_price_cen
 dataFrame.drop(columns=['old_price_reais', 'old_price_centavos', 'new_price_reais', 'new_price_centavos'])
 
 # Conectar a um banco de dados SQLite
-connection = sqlite3.connect('data/quotes.db')
+connection = sqlite3.connect('../data/quotes.db')
 
 # Salvar o dataFrame no banco de dados
 dataFrame.to_sql('mercadolivre_items', connection, if_exists='replace', index=False)
